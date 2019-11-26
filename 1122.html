@@ -1,0 +1,95 @@
+1. 1-100 합을 구하는 반복문
+2. 1부터 100사이의 짝수들의 합을 구하시오.(짝수를 출력하고 줄바꿈하면서 누적되는 합을 출력)
+3. 함수를 사용하여 특정 숫자 사이의 합을 구하시오.
+예를 들면 1에서 50
+또는 2에서 99 등등..
+4. 버튼 클릭시 얼럿을 띄우는 함수를 작성하시오
+5. 클래스 chgText 클릭시 아래 '이헌욱' -> '윤나리'로 변경하는 함수를 작성하시오.
+6. 1)문서로드 시 ,2)버튼 클릭 시
+
+아래 txt_live 영역 안에 
+를 추가하세요.
+
+
+
+
+<script>
+
+    //1-----------------------------------    
+    // var sum = 0;
+    // for(var a=1; a<=100; a++){        
+    //     sum += a
+    // }
+    // document.write(sum+'<br>');
+
+    //2-----------------------------------    
+    // var sum2 = 0;
+    // for(var b=1; b<=100; b++){        
+    //     if ( b%2==0 ) {
+    //        document.write(b) ;
+    //        sum2 += b;
+    //     } 
+    // }
+    // document.write('<br>'+sum2+'<br>');
+
+    //3-----------------------------------    
+    // function fncSum(num1,num2){
+    //     var sum3 = 0;
+    //     for(var c=num1; c<=num2; c++){
+    //         sum3+= c;
+    //     }
+    //     return sum3;
+    // }
+    // var sumadd = fncSum(3,70);
+    // document.write(sumadd);
+
+    //4-----------------------------------    
+    // window.onload=function(){
+    //     function fncAlert() {
+    //         alert("윤나리");
+    //     }
+    //     var pressClick = document.getElementsByTagName('button')[0];
+    //     pressClick.onclick = function() { 
+    //         fncAlert() 
+    //     };       
+    // }
+
+    //5-----------------------------------  
+    // function achange(){
+    //     var user = document.getElementsByClassName('userName')[0];
+    //     user.textContent='윤나리';
+    // }
+    // window.onload =function(){
+    //     var claName = document.getElementsByClassName('chgText')[0];
+    //     claName.onclick = function() {
+    //         achange();
+    //     }
+    // }
+
+
+    //6-----------------------------------  
+    window.onload = function(){
+        document.querySelector('.txt_live').innerHTML = '<p class="txt1">txt1</p>'+'<p class="txt2">txt2</p>'+'<p class="txt3">txt3</p>'
+
+        var btn = document.querySelector('button');
+        btn.onclick = function(){
+            document.querySelector('.txt_live2').innerHTML = '<p class="txt1">txt1</p>'+'<p class="txt2">txt2</p>'+'<p class="txt3">txt3</p>'
+    }
+}
+
+  
+
+    
+
+</script>
+
+<!-- <button>알림창 띄우기</button>
+<p></p> -->
+
+<!-- <br>
+<a href="#" class="chgText">글자 변환</a>
+<span class="userName">이헌욱</span> -->
+<br>
+<button>button</button>
+<div class="txt_live"></div>
+<div class="txt_live2"></div>
